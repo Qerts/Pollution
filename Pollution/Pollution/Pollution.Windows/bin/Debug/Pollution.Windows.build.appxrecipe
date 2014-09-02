@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>QERTSPC</Machine>
+    <WindowsUser>Admin</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>11484634-7ace-40fc-bc08-eadbf092cc4b</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\Admin\documents\visual studio 2013\Projects\Pollution\Pollution\Pollution.Windows\obj\Debug\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Admin\documents\visual studio 2013\Projects\Pollution\Pollution\Pollution.Windows\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Admin\documents\visual studio 2013\Projects\Pollution\Pollution\Pollution.Windows\bin\Debug\Pollution.Windows.exe">
+      <PackagePath>Pollution.Windows.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\documents\visual studio 2013\Projects\Pollution\Pollution\Pollution.Windows\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\documents\visual studio 2013\Projects\Pollution\Pollution\Pollution.Windows\Assets\Shadow0.png">
+      <PackagePath>Assets\Shadow0.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\documents\visual studio 2013\Projects\Pollution\Pollution\Pollution.Windows\Assets\Shadow1.png">
+      <PackagePath>Assets\Shadow1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\documents\visual studio 2013\Projects\Pollution\Pollution\Pollution.Windows\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\documents\visual studio 2013\Projects\Pollution\Pollution\Pollution.Windows\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\documents\visual studio 2013\Projects\Pollution\Pollution\Pollution.Windows\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\documents\visual studio 2013\Projects\Pollution\Pollution\Pollution.Windows\Assets\Smiley0.gif">
+      <PackagePath>Assets\Smiley0.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\documents\visual studio 2013\Projects\Pollution\Pollution\Pollution.Windows\Assets\Smiley1.gif">
+      <PackagePath>Assets\Smiley1.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\documents\visual studio 2013\Projects\Pollution\Pollution\Pollution.Windows\Assets\Smiley2.gif">
+      <PackagePath>Assets\Smiley2.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\documents\visual studio 2013\Projects\Pollution\Pollution\Pollution.Windows\Assets\Smiley3.gif">
+      <PackagePath>Assets\Smiley3.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\documents\visual studio 2013\Projects\Pollution\Pollution\Pollution.Windows\Assets\Smiley4.gif">
+      <PackagePath>Assets\Smiley4.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\documents\visual studio 2013\Projects\Pollution\Pollution\Pollution.Windows\Assets\Smiley5.gif">
+      <PackagePath>Assets\Smiley5.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\documents\visual studio 2013\Projects\Pollution\Pollution\Pollution.Windows\Assets\Smiley6.gif">
+      <PackagePath>Assets\Smiley6.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\documents\visual studio 2013\Projects\Pollution\Pollution\Pollution.Windows\Assets\Smiley7.gif">
+      <PackagePath>Assets\Smiley7.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\documents\visual studio 2013\Projects\Pollution\Pollution\Pollution.Windows\Assets\yos.jpg">
+      <PackagePath>Assets\yos.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\documents\visual studio 2013\Projects\Pollution\Pollution\Pollution.Windows\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\documents\visual studio 2013\Projects\Pollution\Pollution\Pollution.Windows\bin\Debug\PollutionGrid.xbf">
+      <PackagePath>PollutionGrid.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\documents\visual studio 2013\Projects\Pollution\Pollution\Pollution.Windows\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\documents\visual studio 2013\Projects\Pollution\Pollution\Pollution.Windows\bin\Debug\PollutionLeftPanel.xbf">
+      <PackagePath>PollutionLeftPanel.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\documents\visual studio 2013\Projects\Pollution\Pollution\Pollution.Windows\bin\Debug\PollutionRightPanel.xbf">
+      <PackagePath>PollutionRightPanel.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\documents\visual studio 2013\Projects\Pollution\Pollution\Pollution.Windows\bin\Debug\Pollution.Windows.xr.xml">
+      <PackagePath>Pollution.Windows.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\documents\visual studio 2013\Projects\Pollution\Pollution\Pollution.Windows\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

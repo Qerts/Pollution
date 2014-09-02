@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>QERTSPC</Machine>
+    <WindowsUser>Admin</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Release|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>11484634-7ace-40fc-bc08-eadbf092cc4b</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\Admin\Documents\Visual Studio 2013\Projects\Pollution\Pollution\Pollution.Windows\obj\Release\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>9EBC54EC57C72C7BA92B32C541244FE57EB929D752CAD7603B85BABB1656405E</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>11484634-7ace-40fc-bc08-eadbf092cc4b_1.0.0.0_neutral__5gyrq6psz227t</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>11484634-7ace-40fc-bc08-eadbf092cc4b_5gyrq6psz227t!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>11484634-7ace-40fc-bc08-eadbf092cc4b</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Admin</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Admin\Documents\Visual Studio 2013\Projects\Pollution\Pollution\Pollution.Windows\bin\Release\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-08-18T19:54:37.866</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Admin\Documents\Visual Studio 2013\Projects\Pollution\Pollution\Pollution.Windows\bin\Release\Pollution.Windows.exe">
+      <PackagePath>Pollution.Windows.exe</PackagePath>
+      <Modified>2014-08-18T19:54:36.156</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\Documents\Visual Studio 2013\Projects\Pollution\Pollution\Pollution.Windows\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-12T19:06:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\Documents\Visual Studio 2013\Projects\Pollution\Pollution\Pollution.Windows\Assets\Shadow0.png">
+      <PackagePath>Assets\Shadow0.png</PackagePath>
+      <Modified>2014-08-17T09:18:27.744</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\Documents\Visual Studio 2013\Projects\Pollution\Pollution\Pollution.Windows\Assets\Shadow1.png">
+      <PackagePath>Assets\Shadow1.png</PackagePath>
+      <Modified>2014-08-17T10:07:32.210</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\Documents\Visual Studio 2013\Projects\Pollution\Pollution\Pollution.Windows\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-12T19:06:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\Documents\Visual Studio 2013\Projects\Pollution\Pollution\Pollution.Windows\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-12T19:06:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\Documents\Visual Studio 2013\Projects\Pollution\Pollution\Pollution.Windows\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-12T19:06:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\Documents\Visual Studio 2013\Projects\Pollution\Pollution\Pollution.Windows\Assets\Smiley0.gif">
+      <PackagePath>Assets\Smiley0.gif</PackagePath>
+      <Modified>2014-08-16T12:58:45.724</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\Documents\Visual Studio 2013\Projects\Pollution\Pollution\Pollution.Windows\Assets\Smiley1.gif">
+      <PackagePath>Assets\Smiley1.gif</PackagePath>
+      <Modified>2014-08-16T12:58:45.634</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\Documents\Visual Studio 2013\Projects\Pollution\Pollution\Pollution.Windows\Assets\Smiley2.gif">
+      <PackagePath>Assets\Smiley2.gif</PackagePath>
+      <Modified>2014-08-16T12:58:45.644</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\Documents\Visual Studio 2013\Projects\Pollution\Pollution\Pollution.Windows\Assets\Smiley3.gif">
+      <PackagePath>Assets\Smiley3.gif</PackagePath>
+      <Modified>2014-08-16T12:58:45.663</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\Documents\Visual Studio 2013\Projects\Pollution\Pollution\Pollution.Windows\Assets\Smiley4.gif">
+      <PackagePath>Assets\Smiley4.gif</PackagePath>
+      <Modified>2014-08-16T12:58:45.673</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\Documents\Visual Studio 2013\Projects\Pollution\Pollution\Pollution.Windows\Assets\Smiley5.gif">
+      <PackagePath>Assets\Smiley5.gif</PackagePath>
+      <Modified>2014-08-16T12:58:45.686</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\Documents\Visual Studio 2013\Projects\Pollution\Pollution\Pollution.Windows\Assets\Smiley6.gif">
+      <PackagePath>Assets\Smiley6.gif</PackagePath>
+      <Modified>2014-08-16T12:58:45.700</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\Documents\Visual Studio 2013\Projects\Pollution\Pollution\Pollution.Windows\Assets\Smiley7.gif">
+      <PackagePath>Assets\Smiley7.gif</PackagePath>
+      <Modified>2014-08-16T12:58:45.711</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\Documents\Visual Studio 2013\Projects\Pollution\Pollution\Pollution.Windows\Assets\yos.jpg">
+      <PackagePath>Assets\yos.jpg</PackagePath>
+      <Modified>2014-08-15T08:33:56.225</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\Documents\Visual Studio 2013\Projects\Pollution\Pollution\Pollution.Windows\bin\Release\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2014-08-18T10:32:14.384</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\Documents\Visual Studio 2013\Projects\Pollution\Pollution\Pollution.Windows\bin\Release\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2014-08-18T19:54:35.115</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\Documents\Visual Studio 2013\Projects\Pollution\Pollution\Pollution.Windows\bin\Release\Pollution.Windows.xr.xml">
+      <PackagePath>Pollution.Windows.xr.xml</PackagePath>
+      <Modified>2014-08-18T19:54:35.064</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\Documents\Visual Studio 2013\Projects\Pollution\Pollution\Pollution.Windows\bin\Release\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2014-08-18T19:54:37.142</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
