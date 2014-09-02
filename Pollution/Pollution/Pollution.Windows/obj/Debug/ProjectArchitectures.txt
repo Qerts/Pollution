@@ -1,1 +1,0 @@
-C:\Users\Admin\documents\visual studio 2013\Projects\Pollution\Pollution\Pollution.Windows\Pollution.Windows.csproj;neutral
