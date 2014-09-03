@@ -155,22 +155,22 @@ namespace Pollution
             {
                 if (tileCollection.ElementAt(9).Name == "buttonTile")
                 {
-                    tileCollection.ElementAt(16).statusSO2Tile(32);
-                    tileCollection.ElementAt(27).statusO3Tile(54);
-                    tileCollection.ElementAt(29).statusNO2Tile(31);
-                    tileCollection.ElementAt(37).statusCOTile(3563);
-                    tileCollection.ElementAt(46).statusPM10Tile(75);
+                    tileCollection.ElementAt(16).statusSO2Tile();
+                    tileCollection.ElementAt(27).statusO3Tile();
+                    tileCollection.ElementAt(29).statusNO2Tile();
+                    tileCollection.ElementAt(37).statusCOTile();
+                    tileCollection.ElementAt(46).statusPM10Tile();
 
                 }
                 else
                 {
                     //tileCollection.ElementAt(9).buttonRightPanelTile();
                     MainPage.LeftPanel.Margin = new Thickness(0, 0, 0, 0);
-                    tileCollection.ElementAt(16).statusSO2Tile(32);
-                    tileCollection.ElementAt(27).statusO3Tile(54);
-                    tileCollection.ElementAt(29).statusNO2Tile(31);
-                    tileCollection.ElementAt(37).statusCOTile(3563);
-                    tileCollection.ElementAt(46).statusPM10Tile(75);
+                    tileCollection.ElementAt(16).statusSO2Tile();
+                    tileCollection.ElementAt(27).statusO3Tile();
+                    tileCollection.ElementAt(29).statusNO2Tile();
+                    tileCollection.ElementAt(37).statusCOTile();
+                    tileCollection.ElementAt(46).statusPM10Tile();
                     MainPage.RightPanel.Margin = new Thickness(0, -(Window.Current.Bounds.Height / 6) * 4, 0, 0);
                     
                     //tileCollection.ElementAt(53).buttonLeftPanelTile();

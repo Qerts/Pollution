@@ -20,13 +20,13 @@
     <AppXManifest Include="D:\Git\Pollution\Pollution\Pollution\Pollution.Windows\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-09-03T07:50:02.106</Modified>
+      <Modified>2014-09-03T09:02:50.405</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Git\Pollution\Pollution\Pollution\Pollution.Windows\bin\Debug\Pollution.Windows.exe">
       <PackagePath>Pollution.Windows.exe</PackagePath>
-      <Modified>2014-09-03T07:50:00.626</Modified>
+      <Modified>2014-09-03T09:41:07.657</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Git\Pollution\Pollution\Pollution\Pollution.Windows\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
@@ -118,7 +118,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Git\Pollution\Pollution\Pollution\Pollution.Windows\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-09-03T07:50:01.130</Modified>
+      <Modified>2014-09-03T09:02:50.199</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

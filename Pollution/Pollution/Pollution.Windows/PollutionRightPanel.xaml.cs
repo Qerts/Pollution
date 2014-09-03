@@ -220,8 +220,10 @@ namespace Pollution
         }
         public static void showRightPanel()
         {
+            hideLeftPanel();
             RightPanel.Margin = new Thickness(0, 0, 0, 0);
             rightPanelCollection.ElementAt(44).buttonRightPanelButton();
+
         }
     }
 }

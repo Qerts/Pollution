@@ -139,7 +139,7 @@ namespace Pollution
             nameInnerInnerLeftPanelGrid.Children.Add(stationNameStck);
 
             TextBlock stationTitleTxt = new TextBlock();
-            stationTitleTxt.Text = "Ostrava-Fifejdy";//prepsat na funkci
+            stationTitleTxt.Text = Data.StationName;
             stationTitleTxt.FontSize = (Window.Current.Bounds.Height / 30);
             //stationTitle.FontWeight = FontWeights.Bold;
             stationTitleTxt.Foreground = new SolidColorBrush(Colors.White);
@@ -147,7 +147,7 @@ namespace Pollution
             stationNameStck.Children.Add(stationTitleTxt);
 
             TextBlock stationTerritoryTxt = new TextBlock();
-            stationTerritoryTxt.Text = "Moravskoslezský kraj";//prepsat na funkci
+            stationTerritoryTxt.Text = Data.StationRegion;
             stationTerritoryTxt.FontSize = (Window.Current.Bounds.Height / 40);
             stationTerritoryTxt.Foreground = new SolidColorBrush(Colors.White);
             stationTerritoryTxt.HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Center;
@@ -157,7 +157,7 @@ namespace Pollution
             TextBlock stationCoords = new TextBlock();
             Windows.UI.Xaml.Controls.Grid.SetRow(stationCoords, 1);
             nameInnerInnerLeftPanelGrid.Children.Add(stationCoords);
-            stationCoords.Text = "49°50'51\"N, 19°20'21\"E (+6 km)";//prepsat na funkci
+            stationCoords.Text = Data.StationCoordinates;
             stationCoords.FontSize = (Window.Current.Bounds.Height / 40);
             stationCoords.Foreground = new SolidColorBrush(Colors.White);
             stationCoords.HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Center;
@@ -174,21 +174,21 @@ namespace Pollution
             stationStatusesStck.Children.Add(status1Stck);
 
             TextBlock status1TitleTxt = new TextBlock();
-            status1TitleTxt.Text = "PO3";//prepsat na funkci
+            status1TitleTxt.Text = "SO\x2082";
             status1TitleTxt.Foreground = new SolidColorBrush(Colors.White);
             status1TitleTxt.HorizontalAlignment = HorizontalAlignment.Center;
             status1TitleTxt.FontSize = (Window.Current.Bounds.Height / 40);
             status1Stck.Children.Add(status1TitleTxt);
 
             Windows.UI.Xaml.Controls.Grid status1ValueImg = new Windows.UI.Xaml.Controls.Grid();
-            status1ValueImg.Background = new SolidColorBrush(Colors.GreenYellow);//prepsat na funkci
+            status1ValueImg.Background = Data.GetSO2ColorAndStatus().Item1;
             status1ValueImg.Height = (Window.Current.Bounds.Height / 12);
             status1ValueImg.Width = (Window.Current.Bounds.Height / 12);
             status1Stck.Children.Add(status1ValueImg);
 
             TextBlock status1ValueTxt = new TextBlock();
             status1ValueTxt.FontSize = (Window.Current.Bounds.Height / 40);
-            status1ValueTxt.Text = "55";//prepsat na funkci
+            status1ValueTxt.Text = Data.SO2.ToString();
             status1ValueTxt.HorizontalAlignment = HorizontalAlignment.Center;
             status1ValueTxt.VerticalAlignment = VerticalAlignment.Center;
             status1ValueTxt.Foreground = new SolidColorBrush(Colors.White);
@@ -200,21 +200,21 @@ namespace Pollution
             stationStatusesStck.Children.Add(status2Stck);
 
             TextBlock status2TitleTxt = new TextBlock();
-            status2TitleTxt.Text = "PO3";//prepsat na funkci
+            status2TitleTxt.Text = "NO\x2082";//prepsat na funkci
             status2TitleTxt.Foreground = new SolidColorBrush(Colors.White);
             status2TitleTxt.HorizontalAlignment = HorizontalAlignment.Center;
             status2TitleTxt.FontSize = (Window.Current.Bounds.Height / 40);
             status2Stck.Children.Add(status2TitleTxt);
 
             Windows.UI.Xaml.Controls.Grid status2ValueImg = new Windows.UI.Xaml.Controls.Grid();
-            status2ValueImg.Background = new SolidColorBrush(Colors.GreenYellow);//prepsat na funkci
+            status2ValueImg.Background = Data.GetNO2ColorAndStatus().Item1;
             status2ValueImg.Height = (Window.Current.Bounds.Height / 12);
             status2ValueImg.Width = (Window.Current.Bounds.Height / 12);
             status2Stck.Children.Add(status2ValueImg);
 
             TextBlock status2ValueTxt = new TextBlock();
             status2ValueTxt.FontSize = (Window.Current.Bounds.Height / 40);
-            status2ValueTxt.Text = "55";//prepsat na funkci
+            status2ValueTxt.Text = Data.NO2.ToString();
             status2ValueTxt.HorizontalAlignment = HorizontalAlignment.Center;
             status2ValueTxt.VerticalAlignment = VerticalAlignment.Center;
             status2ValueTxt.Foreground = new SolidColorBrush(Colors.White);
@@ -227,21 +227,21 @@ namespace Pollution
             stationStatusesStck.Children.Add(status3Stck);
 
             TextBlock status3TitleTxt = new TextBlock();
-            status3TitleTxt.Text = "PO3";//prepsat na funkci
+            status3TitleTxt.Text = "CO";//prepsat na funkci
             status3TitleTxt.Foreground = new SolidColorBrush(Colors.White);
             status3TitleTxt.HorizontalAlignment = HorizontalAlignment.Center;
             status3TitleTxt.FontSize = (Window.Current.Bounds.Height / 40);
             status3Stck.Children.Add(status3TitleTxt);
 
             Windows.UI.Xaml.Controls.Grid status3ValueImg = new Windows.UI.Xaml.Controls.Grid();
-            status3ValueImg.Background = new SolidColorBrush(Colors.GreenYellow);//prepsat na funkci
+            status3ValueImg.Background = Data.GetCOColorAndStatus().Item1;
             status3ValueImg.Height = (Window.Current.Bounds.Height / 12);
             status3ValueImg.Width = (Window.Current.Bounds.Height / 12);
             status3Stck.Children.Add(status3ValueImg);
 
             TextBlock status3ValueTxt = new TextBlock();
             status3ValueTxt.FontSize = (Window.Current.Bounds.Height / 40);
-            status3ValueTxt.Text = "55";//prepsat na funkci
+            status3ValueTxt.Text = Data.CO.ToString();
             status3ValueTxt.HorizontalAlignment = HorizontalAlignment.Center;
             status3ValueTxt.VerticalAlignment = VerticalAlignment.Center;
             status3ValueTxt.Foreground = new SolidColorBrush(Colors.White);
@@ -254,21 +254,21 @@ namespace Pollution
             stationStatusesStck.Children.Add(status4Stck);
 
             TextBlock status4TitleTxt = new TextBlock();
-            status4TitleTxt.Text = "PO3";//prepsat na funkci
+            status4TitleTxt.Text = "O\x2083";//prepsat na funkci
             status4TitleTxt.Foreground = new SolidColorBrush(Colors.White);
             status4TitleTxt.HorizontalAlignment = HorizontalAlignment.Center;
             status4TitleTxt.FontSize = (Window.Current.Bounds.Height / 40);
             status4Stck.Children.Add(status4TitleTxt);
 
             Windows.UI.Xaml.Controls.Grid status4ValueImg = new Windows.UI.Xaml.Controls.Grid();
-            status4ValueImg.Background = new SolidColorBrush(Colors.GreenYellow);//prepsat na funkci
+            status4ValueImg.Background = Data.GetO3ColorAndStatus().Item1;
             status4ValueImg.Height = (Window.Current.Bounds.Height / 12);
             status4ValueImg.Width = (Window.Current.Bounds.Height / 12);
             status4Stck.Children.Add(status4ValueImg);
 
             TextBlock status4ValueTxt = new TextBlock();
             status4ValueTxt.FontSize = (Window.Current.Bounds.Height / 40);
-            status4ValueTxt.Text = "55";//prepsat na funkci
+            status4ValueTxt.Text = Data.O3.ToString();
             status4ValueTxt.HorizontalAlignment = HorizontalAlignment.Center;
             status4ValueTxt.VerticalAlignment = VerticalAlignment.Center;
             status4ValueTxt.Foreground = new SolidColorBrush(Colors.White);
@@ -281,21 +281,21 @@ namespace Pollution
             stationStatusesStck.Children.Add(status5Stck);
 
             TextBlock status5TitleTxt = new TextBlock();
-            status5TitleTxt.Text = "PO3";//prepsat na funkci
+            status5TitleTxt.Text = "PM\x2081\x2080";//prepsat na funkci
             status5TitleTxt.Foreground = new SolidColorBrush(Colors.White);
             status5TitleTxt.HorizontalAlignment = HorizontalAlignment.Center;
             status5TitleTxt.FontSize = (Window.Current.Bounds.Height / 40);
             status5Stck.Children.Add(status5TitleTxt);
 
             Windows.UI.Xaml.Controls.Grid status5ValueImg = new Windows.UI.Xaml.Controls.Grid();
-            status5ValueImg.Background = new SolidColorBrush(Colors.GreenYellow);//prepsat na funkci
+            status5ValueImg.Background = Data.GetPM10ColorAndStatus().Item1;
             status5ValueImg.Height = (Window.Current.Bounds.Height / 12);
             status5ValueImg.Width = (Window.Current.Bounds.Height / 12);
             status5Stck.Children.Add(status5ValueImg);
 
             TextBlock status5ValueTxt = new TextBlock();
             status5ValueTxt.FontSize = (Window.Current.Bounds.Height / 40);
-            status5ValueTxt.Text = "55";//prepsat na funkci
+            status5ValueTxt.Text = Data.PM10.ToString();
             status5ValueTxt.HorizontalAlignment = HorizontalAlignment.Center;
             status5ValueTxt.VerticalAlignment = VerticalAlignment.Center;
             status5ValueTxt.Foreground = new SolidColorBrush(Colors.White);
@@ -699,8 +699,10 @@ namespace Pollution
         }
         public static void showLeftPanel() 
         {
+            hideRightPanel();
             LeftPanel.Margin = new Thickness(0, -(Window.Current.Bounds.Height / 6) * 4, 0, 0);
             leftPanelCollection.ElementAt(0).buttonLeftPanelButton();
+            
         }
     }
 }

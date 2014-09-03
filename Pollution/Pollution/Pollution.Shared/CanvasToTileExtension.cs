@@ -140,62 +140,17 @@ namespace Pollution
         /// <param name="name"></param>
         /// <param name="brush"></param>
         /// <returns></returns>
-        public static Canvas statusSO2Tile(this Canvas tile, double rating)
+        public static Canvas statusSO2Tile(this Canvas tile)
         {
             tile.Children.Clear();
             tile.Opacity = 1;
 
             string status = "error";
 
-            if (rating < 120)
-            {
-                if (rating < 50)
-                {
-                    if (rating < 25)
-                    {
-                        //zbarvi se na velmi dobre
-                        tile.Background = new SolidColorBrush(Color.FromArgb(255, 0, 138, 0));
-                        status = "velmi dobré";
-                    }
-                    else
-                    {
-                        //zbarvi se na dobre
-                        tile.Background = new SolidColorBrush(Color.FromArgb(255, 132, 161, 47)); 
-                        status = "dobré";
-                    }
-                }
-                else
-                {
-                    //zbarvi se na uspokojiva
-                    tile.Background = new SolidColorBrush(Color.FromArgb(255, 184, 177, 0));
-                    status = "uspokojivé";
-                }
-            }
-            else 
-            {
-                if (rating < 350)
-                {
-                    //zbarvi se na vyhovujici
-                    tile.Background = new SolidColorBrush(Color.FromArgb(255, 207, 141, 19));
-                    status = "vyhovující";
-                }
-                else 
-                {
-                    if (rating < 500)
-                    {
-                        //zbarvi se na spatna
-                        tile.Background = new SolidColorBrush(Color.FromArgb(255, 207, 84, 23));
-                        status = "špatné";
-                    }
-                    else 
-                    {
-                        //zbarvi se na velmi spatna
-                        tile.Background = new SolidColorBrush(Color.FromArgb(255, 207, 51, 27)); 
-                        status = "velmi špatné";
-                    }
-                }
-            }
-            
+            int rating = Data.SO2;
+
+            tile.Background = Data.GetSO2ColorAndStatus().Item1;
+            status = Data.GetSO2ColorAndStatus().Item2;
            
 
             TextBlock ratingString = new TextBlock();
@@ -250,61 +205,15 @@ namespace Pollution
         /// <param name="name"></param>
         /// <param name="brush"></param>
         /// <returns></returns>
-        public static Canvas statusNO2Tile(this Canvas tile, double rating)
+        public static Canvas statusNO2Tile(this Canvas tile)
         {
             tile.Children.Clear();
             tile.Opacity = 1;
 
             string status = "error";
-
-            if (rating < 100)
-            {
-                if (rating < 50)
-                {
-                    if (rating < 25)
-                    {
-                        //zbarvi se na velmi dobre
-                        tile.Background = new SolidColorBrush(Color.FromArgb(255, 0, 138, 0));
-                        status = "velmi dobré";
-                    }
-                    else
-                    {
-                        //zbarvi se na dobre
-                        tile.Background = new SolidColorBrush(Color.FromArgb(255, 132, 161, 47));
-                        status = "dobré";
-                    }
-                }
-                else
-                {
-                    //zbarvi se na uspokojiva
-                    tile.Background = new SolidColorBrush(Color.FromArgb(255, 184, 177, 0));
-                    status = "uspokojivé";
-                }
-            }
-            else
-            {
-                if (rating < 200)
-                {
-                    //zbarvi se na vyhovujici
-                    tile.Background = new SolidColorBrush(Color.FromArgb(255, 207, 141, 19));
-                    status = "vyhovující";
-                }
-                else
-                {
-                    if (rating < 400)
-                    {
-                        //zbarvi se na spatna
-                        tile.Background = new SolidColorBrush(Color.FromArgb(255, 207, 84, 23));
-                        status = "špatné";
-                    }
-                    else
-                    {
-                        //zbarvi se na velmi spatna
-                        tile.Background = new SolidColorBrush(Color.FromArgb(255, 207, 51, 27));
-                        status = "velmi špatné";
-                    }
-                }
-            }
+            int rating = Data.NO2;
+            tile.Background = Data.GetNO2ColorAndStatus().Item1;
+            status = Data.GetNO2ColorAndStatus().Item2;
 
             TextBlock ratingString = new TextBlock();
             ratingString.Text = rating.ToString();
@@ -356,61 +265,17 @@ namespace Pollution
         /// <param name="name"></param>
         /// <param name="brush"></param>
         /// <returns></returns>
-        public static Canvas statusCOTile(this Canvas tile, double rating)
+        public static Canvas statusCOTile(this Canvas tile)
         {
             tile.Children.Clear();
             tile.Opacity = 1;
 
             string status = "error";
+            int rating = Data.CO;
+            tile.Background = Data.GetCOColorAndStatus().Item1;
+            status = Data.GetCOColorAndStatus().Item2;
 
-            if (rating < 4000)
-            {
-                if (rating < 2000)
-                {
-                    if (rating < 1000)
-                    {
-                        //zbarvi se na velmi dobre
-                        tile.Background = new SolidColorBrush(Color.FromArgb(255, 0, 138, 0));
-                        status = "velmi dobré";
-                    }
-                    else
-                    {
-                        //zbarvi se na dobre
-                        tile.Background = new SolidColorBrush(Color.FromArgb(255, 132, 161, 47));
-                        status = "dobré";
-                    }
-                }
-                else
-                {
-                    //zbarvi se na uspokojiva
-                    tile.Background = new SolidColorBrush(Color.FromArgb(255, 184, 177, 0));
-                    status = "uspokojivé";
-                }
-            }
-            else
-            {
-                if (rating < 10000)
-                {
-                    //zbarvi se na vyhovujici
-                    tile.Background = new SolidColorBrush(Color.FromArgb(255, 207, 141, 19));
-                    status = "vyhovující";
-                }
-                else
-                {
-                    if (rating < 30000)
-                    {
-                        //zbarvi se na spatna
-                        tile.Background = new SolidColorBrush(Color.FromArgb(255, 207, 84, 23));
-                        status = "špatné";
-                    }
-                    else
-                    {
-                        //zbarvi se na velmi spatna
-                        tile.Background = new SolidColorBrush(Color.FromArgb(255, 207, 51, 27));
-                        status = "velmi špatné";
-                    }
-                }
-            }
+            
 
             TextBlock ratingString = new TextBlock();
             ratingString.Text = rating.ToString();
@@ -462,61 +327,15 @@ namespace Pollution
         /// <param name="name"></param>
         /// <param name="brush"></param>
         /// <returns></returns>
-        public static Canvas statusO3Tile(this Canvas tile, double rating)
+        public static Canvas statusO3Tile(this Canvas tile)
         {
             tile.Children.Clear();
             tile.Opacity = 1;
 
             string status = "error";
-
-            if (rating < 120)
-            {
-                if (rating < 65)
-                {
-                    if (rating < 33)
-                    {
-                        //zbarvi se na velmi dobre
-                        tile.Background = new SolidColorBrush(Color.FromArgb(255, 0, 138, 0));
-                        status = "velmi dobré";
-                    }
-                    else
-                    {
-                        //zbarvi se na dobre
-                        tile.Background = new SolidColorBrush(Color.FromArgb(255, 132, 161, 47));
-                        status = "dobré";
-                    }
-                }
-                else
-                {
-                    //zbarvi se na uspokojiva
-                    tile.Background = new SolidColorBrush(Color.FromArgb(255, 184, 177, 0));
-                    status = "uspokojivé";
-                }
-            }
-            else
-            {
-                if (rating < 180)
-                {
-                    //zbarvi se na vyhovujici
-                    tile.Background = new SolidColorBrush(Color.FromArgb(255, 207, 141, 19));
-                    status = "vyhovující";
-                }
-                else
-                {
-                    if (rating < 240)
-                    {
-                        //zbarvi se na spatna
-                        tile.Background = new SolidColorBrush(Color.FromArgb(255, 207, 84, 23));
-                        status = "špatné";
-                    }
-                    else
-                    {
-                        //zbarvi se na velmi spatna
-                        tile.Background = new SolidColorBrush(Color.FromArgb(255, 207, 51, 27));
-                        status = "velmi špatné";
-                    }
-                }
-            }
+            int rating = Data.O3;
+            tile.Background = Data.GetO3ColorAndStatus().Item1;
+            status = Data.GetO3ColorAndStatus().Item2;
 
             TextBlock ratingString = new TextBlock();
             ratingString.Text = rating.ToString();
@@ -570,61 +389,15 @@ namespace Pollution
         /// <param name="name"></param>
         /// <param name="brush"></param>
         /// <returns></returns>
-        public static Canvas statusPM10Tile(this Canvas tile, double rating)
+        public static Canvas statusPM10Tile(this Canvas tile)
         {
             tile.Children.Clear();
             tile.Opacity = 1;
 
             string status = "error";
-
-            if (rating < 70)
-            {
-                if (rating < 40)
-                {
-                    if (rating < 20)
-                    {
-                        //zbarvi se na velmi dobre
-                        tile.Background = new SolidColorBrush(Color.FromArgb(255, 0, 138, 0));
-                        status = "velmi dobré";
-                    }
-                    else
-                    {
-                        //zbarvi se na dobre
-                        tile.Background = new SolidColorBrush(Color.FromArgb(255, 132, 161, 47));
-                        status = "dobré";
-                    }
-                }
-                else
-                {
-                    //zbarvi se na uspokojiva
-                    tile.Background = new SolidColorBrush(Color.FromArgb(255, 184, 177, 0));
-                    status = "uspokojivé";
-                }
-            }
-            else
-            {
-                if (rating < 90)
-                {
-                    //zbarvi se na vyhovujici
-                    tile.Background = new SolidColorBrush(Color.FromArgb(255, 207, 141, 19));
-                    status = "vyhovující";
-                }
-                else
-                {
-                    if (rating < 180)
-                    {
-                        //zbarvi se na spatna
-                        tile.Background = new SolidColorBrush(Color.FromArgb(255, 207, 84, 23));
-                        status = "špatné";
-                    }
-                    else
-                    {
-                        //zbarvi se na velmi spatna
-                        tile.Background = new SolidColorBrush(Color.FromArgb(255, 207, 51, 27));
-                        status = "velmi špatné";
-                    }
-                }
-            }
+            int rating = Data.PM10;
+            tile.Background = Data.GetPM10ColorAndStatus().Item1;
+            status = Data.GetPM10ColorAndStatus().Item2;
 
 
                 
