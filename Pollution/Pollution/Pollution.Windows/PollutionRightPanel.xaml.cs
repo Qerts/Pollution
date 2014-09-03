@@ -213,7 +213,7 @@ namespace Pollution
 
         }
 
-        public static void hideRightPanel()
+        public static void hideRightPanel()        
         {
             RightPanel.Margin = new Thickness(0, -(Window.Current.Bounds.Height / 6) * 4, 0, 0);
             rightPanelCollection.ElementAt(44).buttonRightPanelTile();

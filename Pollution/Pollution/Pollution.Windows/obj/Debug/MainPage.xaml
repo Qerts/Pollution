@@ -21,10 +21,12 @@
 			VerticalScrollMode="Disabled" 
 			ZoomMode="Enabled" 
         >
-    
-			<Grid  x:Name="LayoutGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="768" Width="1366"/>
-    
-		</ScrollViewer>
+
+            <Grid  x:Name="LayoutGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="768" Width="1366">
+                
+            </Grid>
+
+        </ScrollViewer>
     
 	</Canvas>
     

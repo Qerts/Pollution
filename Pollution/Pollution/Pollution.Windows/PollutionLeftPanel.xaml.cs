@@ -102,23 +102,21 @@ namespace Pollution
             Windows.UI.Xaml.Controls.Grid.SetColumnSpan(outerInnerLeftPanelGrid, 10);
             Windows.UI.Xaml.Controls.Grid.SetRow(outerInnerLeftPanelGrid, 1);
             Windows.UI.Xaml.Controls.Grid.SetRowSpan(outerInnerLeftPanelGrid, 10);
-            outerInnerLeftPanelGrid.Background = new SolidColorBrush(Colors.Wheat);
             LeftPanel.Children.Add(outerInnerLeftPanelGrid);
 
             ColumnDefinition coludef1 = new ColumnDefinition();
-            coludef1.Width = new GridLength(3, GridUnitType.Star); 
+            coludef1.Width = new GridLength(35, GridUnitType.Star); 
             outerInnerLeftPanelGrid.ColumnDefinitions.Add(coludef1);
             ColumnDefinition coludef2 = new ColumnDefinition();
-            coludef2.Width = new GridLength(3, GridUnitType.Star); 
+            coludef2.Width = new GridLength(35, GridUnitType.Star); 
             outerInnerLeftPanelGrid.ColumnDefinitions.Add(coludef2);
             ColumnDefinition coludef3 = new ColumnDefinition();
-            coludef3.Width = new GridLength(4, GridUnitType.Star); 
+            coludef3.Width = new GridLength(30, GridUnitType.Star); 
             outerInnerLeftPanelGrid.ColumnDefinitions.Add(coludef3);
 
             ////+Grid pro nazev a male stavy
             Windows.UI.Xaml.Controls.Grid nameInnerInnerLeftPanelGrid = new Windows.UI.Xaml.Controls.Grid();
             Windows.UI.Xaml.Controls.Grid.SetColumn(nameInnerInnerLeftPanelGrid, 0);
-            nameInnerInnerLeftPanelGrid.Background = new SolidColorBrush(Colors.Blue);
             nameInnerInnerLeftPanelGrid.Height = (Window.Current.Bounds.Height / 6) * 3;
             nameInnerInnerLeftPanelGrid.Width = (Window.Current.Bounds.Height / 6) * 3;
 
@@ -129,14 +127,14 @@ namespace Pollution
             nameRowDef2.Height = new GridLength(1, GridUnitType.Star);
             nameInnerInnerLeftPanelGrid.RowDefinitions.Add(nameRowDef2);
             RowDefinition nameRowDef3 = new RowDefinition();
-            nameRowDef3.Height = new GridLength(1, GridUnitType.Star);
+            nameRowDef3.Height = new GridLength(2, GridUnitType.Star);
             nameInnerInnerLeftPanelGrid.RowDefinitions.Add(nameRowDef3);
             
             outerInnerLeftPanelGrid.Children.Add(nameInnerInnerLeftPanelGrid);
 
             ////++Stackpanel s nazvem a krajem
             StackPanel stationNameStck = new StackPanel();
-            stationNameStck.Background = new SolidColorBrush(Colors.Black);
+            stationNameStck.VerticalAlignment = VerticalAlignment.Center;
             Windows.UI.Xaml.Controls.Grid.SetRow(stationNameStck, 0);
             nameInnerInnerLeftPanelGrid.Children.Add(stationNameStck);
 
@@ -156,11 +154,16 @@ namespace Pollution
             stationNameStck.Children.Add(stationTerritoryTxt);
 
             ////++Stack panel pro koordinaty
-            //Windows.UI.Xaml.Controls.Grid
+            TextBlock stationCoords = new TextBlock();
+            Windows.UI.Xaml.Controls.Grid.SetRow(stationCoords, 1);
+            nameInnerInnerLeftPanelGrid.Children.Add(stationCoords);
+            stationCoords.Text = "49°50'51\"N, 19°20'21\"E (+6 km)";//prepsat na funkci
+            stationCoords.FontSize = (Window.Current.Bounds.Height / 40);
+            stationCoords.Foreground = new SolidColorBrush(Colors.White);
+            stationCoords.HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Center;
 
             ////++Stack panel pro jednotlive stavy
             StackPanel stationStatusesStck = new StackPanel();
-            stationStatusesStck.Background = new SolidColorBrush(Colors.Black);
             stationStatusesStck.Orientation = Orientation.Horizontal;
             Windows.UI.Xaml.Controls.Grid.SetRow(stationStatusesStck, 2);
             nameInnerInnerLeftPanelGrid.Children.Add(stationStatusesStck);
@@ -307,20 +310,267 @@ namespace Pollution
             ////+Grid pro teplomery
             Windows.UI.Xaml.Controls.Grid barsInnerInnerLeftPanelGrid = new Windows.UI.Xaml.Controls.Grid();
             Windows.UI.Xaml.Controls.Grid.SetColumn(barsInnerInnerLeftPanelGrid, 1);
-            barsInnerInnerLeftPanelGrid.Background = new SolidColorBrush(Colors.Yellow);
             barsInnerInnerLeftPanelGrid.Height = (Window.Current.Bounds.Height / 6) * 3;
             barsInnerInnerLeftPanelGrid.Width = (Window.Current.Bounds.Height / 6) * 3;
             outerInnerLeftPanelGrid.Children.Add(barsInnerInnerLeftPanelGrid);
+
+            ////++Stack panel pro teplomery
+            StackPanel stationProgBarsStck = new StackPanel();
+            stationProgBarsStck.VerticalAlignment = VerticalAlignment.Center;
+            stationProgBarsStck.HorizontalAlignment = HorizontalAlignment.Center;
+            stationProgBarsStck.Orientation = Orientation.Horizontal;
+            barsInnerInnerLeftPanelGrid.Children.Add(stationProgBarsStck);
+
+            ////+++Bar prvni slozky
+            Windows.UI.Xaml.Controls.Grid firstBarGrid = new Windows.UI.Xaml.Controls.Grid();
+            stationProgBarsStck.Children.Add(firstBarGrid);
+            firstBarGrid.Margin = new Thickness(Window.Current.Bounds.Height / 60, 0, Window.Current.Bounds.Height / 60, 0);
+
+            StackPanel predelatNaImg1 = new StackPanel();
+            predelatNaImg1.Background = new SolidColorBrush(Colors.GreenYellow);
+            predelatNaImg1.Width = Window.Current.Bounds.Height / 20;
+            predelatNaImg1.Height = Window.Current.Bounds.Height / 3;
+            firstBarGrid.Children.Add(predelatNaImg1);
+
+            ////+++Bar druhe slozky
+            Windows.UI.Xaml.Controls.Grid secondBarGrid = new Windows.UI.Xaml.Controls.Grid();
+            stationProgBarsStck.Children.Add(secondBarGrid);
+            secondBarGrid.Margin = new Thickness(Window.Current.Bounds.Height / 60, 0, Window.Current.Bounds.Height / 60, 0);
+
+            StackPanel predelatNaImg2 = new StackPanel();
+            predelatNaImg2.Background = new SolidColorBrush(Colors.GreenYellow);
+            predelatNaImg2.Width = Window.Current.Bounds.Height / 20;
+            predelatNaImg2.Height = Window.Current.Bounds.Height / 3;
+            secondBarGrid.Children.Add(predelatNaImg2);
+
+            ////+++Bar treti slozky
+            Windows.UI.Xaml.Controls.Grid thirdBarGrid = new Windows.UI.Xaml.Controls.Grid();
+            stationProgBarsStck.Children.Add(thirdBarGrid);
+            thirdBarGrid.Margin = new Thickness(Window.Current.Bounds.Height / 60, 0, Window.Current.Bounds.Height / 60, 0);
+
+            StackPanel predelatNaImg3 = new StackPanel();
+            predelatNaImg3.Background = new SolidColorBrush(Colors.GreenYellow);
+            predelatNaImg3.Width = Window.Current.Bounds.Height / 20;
+            predelatNaImg3.Height = Window.Current.Bounds.Height / 3;
+            thirdBarGrid.Children.Add(predelatNaImg3);
+
+            ////+++Bar ctvrte slozky
+            Windows.UI.Xaml.Controls.Grid fourthBarGrid = new Windows.UI.Xaml.Controls.Grid();
+            stationProgBarsStck.Children.Add(fourthBarGrid);
+            fourthBarGrid.Margin = new Thickness(Window.Current.Bounds.Height / 60, 0, Window.Current.Bounds.Height / 60, 0);
+
+            StackPanel predelatNaImg4 = new StackPanel();
+            predelatNaImg4.Background = new SolidColorBrush(Colors.GreenYellow);
+            predelatNaImg4.Width = Window.Current.Bounds.Height / 20;
+            predelatNaImg4.Height = Window.Current.Bounds.Height / 3;
+            fourthBarGrid.Children.Add(predelatNaImg4);
+
+            ////+++Bar prvni slozky
+            Windows.UI.Xaml.Controls.Grid fifthBarGrid = new Windows.UI.Xaml.Controls.Grid();
+            stationProgBarsStck.Children.Add(fifthBarGrid);
+            fifthBarGrid.Margin = new Thickness(Window.Current.Bounds.Height / 60, 0, Window.Current.Bounds.Height / 60, 0);
+
+            StackPanel predelatNaImg5 = new StackPanel();
+            predelatNaImg5.Background = new SolidColorBrush(Colors.GreenYellow);
+            predelatNaImg5.Width = Window.Current.Bounds.Height / 20;
+            predelatNaImg5.Height = Window.Current.Bounds.Height / 3;
+            fifthBarGrid.Children.Add(predelatNaImg5);
+            
+
+
             ////+Grid pro legendu a hlavni stav
             Windows.UI.Xaml.Controls.Grid legendInnerInnerLeftPanelGrid = new Windows.UI.Xaml.Controls.Grid();
             Windows.UI.Xaml.Controls.Grid.SetColumn(legendInnerInnerLeftPanelGrid, 2);
-            legendInnerInnerLeftPanelGrid.Background = new SolidColorBrush(Colors.Green);
             legendInnerInnerLeftPanelGrid.Height = (Window.Current.Bounds.Height / 6) * 3;
             legendInnerInnerLeftPanelGrid.Width = (Window.Current.Bounds.Height / 6) * 3;
             outerInnerLeftPanelGrid.Children.Add(legendInnerInnerLeftPanelGrid);
 
 
-            
+            ColumnDefinition legendColDef1 = new ColumnDefinition();
+            legendColDef1.Width = new GridLength(1, GridUnitType.Star);
+            legendInnerInnerLeftPanelGrid.ColumnDefinitions.Add(legendColDef1);
+            ColumnDefinition legendColDef2 = new ColumnDefinition();
+            legendColDef2.Width = new GridLength(1, GridUnitType.Star);
+            legendInnerInnerLeftPanelGrid.ColumnDefinitions.Add(legendColDef2);
+
+            ////++Stackpanel pro hlavní status
+
+            Windows.UI.Xaml.Controls.Grid legendStatusStck = new Windows.UI.Xaml.Controls.Grid();
+            legendStatusStck.Background = new SolidColorBrush(Colors.YellowGreen); //prepsat a funkci
+            Windows.UI.Xaml.Controls.Grid.SetColumn(legendStatusStck, 0);
+            legendStatusStck.Height = Window.Current.Bounds.Height / 6;
+            legendStatusStck.Width = Window.Current.Bounds.Height / 6;
+            legendStatusStck.HorizontalAlignment = HorizontalAlignment.Center;
+            legendStatusStck.VerticalAlignment = VerticalAlignment.Top;
+            legendStatusStck.Margin = new Thickness(0, Window.Current.Bounds.Height / 12, 0, 0);
+            legendInnerInnerLeftPanelGrid.Children.Add(legendStatusStck);
+
+            TextBlock legendStatusTxt = new TextBlock();
+            legendStatusTxt.Foreground = new SolidColorBrush(Colors.White);
+            legendStatusTxt.Text = "2"; //prepsat na funkci
+            legendStatusTxt.FontSize = Window.Current.Bounds.Height / 12;
+            legendStatusTxt.HorizontalAlignment = HorizontalAlignment.Center;
+            legendStatusTxt.VerticalAlignment = VerticalAlignment.Center;
+            Windows.UI.Xaml.Controls.Grid.SetColumn(legendStatusTxt, 1);
+            legendStatusStck.Children.Add(legendStatusTxt);
+
+            ////++Grid pro legendu
+            Windows.UI.Xaml.Controls.Grid legendLegendGrid = new Windows.UI.Xaml.Controls.Grid();
+            Windows.UI.Xaml.Controls.Grid.SetColumn(legendLegendGrid, 1);
+            legendLegendGrid.HorizontalAlignment = HorizontalAlignment.Center;
+            legendLegendGrid.VerticalAlignment = VerticalAlignment.Top;
+            legendLegendGrid.Margin = new Thickness(0, Window.Current.Bounds.Height / 12, 0, 0);
+            legendInnerInnerLeftPanelGrid.Children.Add(legendLegendGrid);
+
+            ColumnDefinition legendLegendColDef1 = new ColumnDefinition();
+            legendLegendColDef1.Width = new GridLength(Window.Current.Bounds.Height / 25, GridUnitType.Pixel);
+            legendLegendGrid.ColumnDefinitions.Add(legendLegendColDef1);
+            ColumnDefinition legendLegendColDef2 = new ColumnDefinition();
+            legendLegendColDef2.Width = new GridLength(Window.Current.Bounds.Height / 100, GridUnitType.Pixel);
+            legendLegendGrid.ColumnDefinitions.Add(legendLegendColDef2);
+            ColumnDefinition legendLegendColDef3 = new ColumnDefinition();
+            legendLegendColDef3.Width = new GridLength(10, GridUnitType.Star);
+            legendLegendGrid.ColumnDefinitions.Add(legendLegendColDef3);
+
+            RowDefinition legendLegendRowDef1 = new RowDefinition();
+            legendLegendRowDef1.Height = new GridLength(Window.Current.Bounds.Height / 25, GridUnitType.Pixel);
+            legendLegendGrid.RowDefinitions.Add(legendLegendRowDef1);
+            RowDefinition legendLegendRowDef2 = new RowDefinition();
+            legendLegendRowDef2.Height = new GridLength(Window.Current.Bounds.Height / 25, GridUnitType.Pixel);
+            legendLegendGrid.RowDefinitions.Add(legendLegendRowDef2);
+            RowDefinition legendLegendRowDef3 = new RowDefinition();
+            legendLegendRowDef3.Height = new GridLength(Window.Current.Bounds.Height / 25, GridUnitType.Pixel);
+            legendLegendGrid.RowDefinitions.Add(legendLegendRowDef3);
+            RowDefinition legendLegendRowDef4 = new RowDefinition();
+            legendLegendRowDef4.Height = new GridLength(Window.Current.Bounds.Height / 25, GridUnitType.Pixel);
+            legendLegendGrid.RowDefinitions.Add(legendLegendRowDef4);
+            RowDefinition legendLegendRowDef5 = new RowDefinition();
+            legendLegendRowDef5.Height = new GridLength(Window.Current.Bounds.Height / 25, GridUnitType.Pixel);
+            legendLegendGrid.RowDefinitions.Add(legendLegendRowDef5);
+            RowDefinition legendLegendRowDef6 = new RowDefinition();
+            legendLegendRowDef6.Height = new GridLength(Window.Current.Bounds.Height / 25, GridUnitType.Pixel);
+            legendLegendGrid.RowDefinitions.Add(legendLegendRowDef6);
+            RowDefinition legendLegendRowDef7 = new RowDefinition();
+            legendLegendRowDef7.Height = new GridLength(Window.Current.Bounds.Height / 25, GridUnitType.Pixel);
+            legendLegendGrid.RowDefinitions.Add(legendLegendRowDef7);
+            RowDefinition legendLegendRowDef8 = new RowDefinition();
+            legendLegendRowDef8.Height = new GridLength(Window.Current.Bounds.Height / 25, GridUnitType.Pixel);
+            legendLegendGrid.RowDefinitions.Add(legendLegendRowDef8);
+
+            ////+++Jednotlive legendy
+            //1
+            StackPanel legendUnitImg1 = new StackPanel();
+            legendUnitImg1.Background = new SolidColorBrush(Color.FromArgb(255, 207, 51, 27));
+            Windows.UI.Xaml.Controls.Grid.SetColumn(legendUnitImg1, 0);
+            Windows.UI.Xaml.Controls.Grid.SetRow(legendUnitImg1, 0);
+            legendLegendGrid.Children.Add(legendUnitImg1);
+
+            TextBlock legentUnitTxt1 = new TextBlock();
+            legentUnitTxt1.Foreground = new SolidColorBrush(Colors.White);
+            legentUnitTxt1.Text = "velmi špatné";
+            legentUnitTxt1.FontSize = Window.Current.Bounds.Height / 40;
+            Windows.UI.Xaml.Controls.Grid.SetColumn(legentUnitTxt1, 2);
+            Windows.UI.Xaml.Controls.Grid.SetRow(legentUnitTxt1, 0);
+            legendLegendGrid.Children.Add(legentUnitTxt1);
+            //2
+            StackPanel legendUnitImg2 = new StackPanel();
+            legendUnitImg2.Background = new SolidColorBrush(Color.FromArgb(255, 207, 84, 23));
+            Windows.UI.Xaml.Controls.Grid.SetColumn(legendUnitImg2, 0);
+            Windows.UI.Xaml.Controls.Grid.SetRow(legendUnitImg2, 1);
+            legendLegendGrid.Children.Add(legendUnitImg2);
+
+            TextBlock legentUnitTxt2 = new TextBlock();
+            legentUnitTxt2.Foreground = new SolidColorBrush(Colors.White);
+            legentUnitTxt2.Text = "špatné";
+            legentUnitTxt2.FontSize = Window.Current.Bounds.Height / 40;
+            Windows.UI.Xaml.Controls.Grid.SetColumn(legentUnitTxt2, 2);
+            Windows.UI.Xaml.Controls.Grid.SetRow(legentUnitTxt2, 1);
+            legendLegendGrid.Children.Add(legentUnitTxt2);
+            //3
+            StackPanel legendUnitImg3 = new StackPanel();
+            legendUnitImg3.Background = new SolidColorBrush(Color.FromArgb(255, 207, 141, 19));
+            Windows.UI.Xaml.Controls.Grid.SetColumn(legendUnitImg3, 0);
+            Windows.UI.Xaml.Controls.Grid.SetRow(legendUnitImg3, 2);
+            legendLegendGrid.Children.Add(legendUnitImg3);
+
+            TextBlock legentUnitTxt3 = new TextBlock();
+            legentUnitTxt3.Foreground = new SolidColorBrush(Colors.White);
+            legentUnitTxt3.Text = "vyhovující";
+            legentUnitTxt3.FontSize = Window.Current.Bounds.Height / 40;
+            Windows.UI.Xaml.Controls.Grid.SetColumn(legentUnitTxt3, 2);
+            Windows.UI.Xaml.Controls.Grid.SetRow(legentUnitTxt3, 2);
+            legendLegendGrid.Children.Add(legentUnitTxt3);
+            //4
+            StackPanel legendUnitImg4 = new StackPanel();
+            legendUnitImg4.Background = new SolidColorBrush(Color.FromArgb(255, 184, 177, 0));
+            Windows.UI.Xaml.Controls.Grid.SetColumn(legendUnitImg4, 0);
+            Windows.UI.Xaml.Controls.Grid.SetRow(legendUnitImg4, 3);
+            legendLegendGrid.Children.Add(legendUnitImg4);
+
+            TextBlock legentUnitTxt4 = new TextBlock();
+            legentUnitTxt4.Foreground = new SolidColorBrush(Colors.White);
+            legentUnitTxt4.Text = "uspokojivé";
+            legentUnitTxt4.FontSize = Window.Current.Bounds.Height / 40;
+            Windows.UI.Xaml.Controls.Grid.SetColumn(legentUnitTxt4, 2);
+            Windows.UI.Xaml.Controls.Grid.SetRow(legentUnitTxt4, 3);
+            legendLegendGrid.Children.Add(legentUnitTxt4);
+            //5
+            StackPanel legendUnitImg5 = new StackPanel();
+            legendUnitImg5.Background = new SolidColorBrush(Color.FromArgb(255, 132, 161, 47));
+            Windows.UI.Xaml.Controls.Grid.SetColumn(legendUnitImg5, 0);
+            Windows.UI.Xaml.Controls.Grid.SetRow(legendUnitImg5, 4);
+            legendLegendGrid.Children.Add(legendUnitImg5);
+
+            TextBlock legentUnitTxt5 = new TextBlock();
+            legentUnitTxt5.Foreground = new SolidColorBrush(Colors.White);
+            legentUnitTxt5.Text = "dobré";
+            legentUnitTxt5.FontSize = Window.Current.Bounds.Height / 40;
+            Windows.UI.Xaml.Controls.Grid.SetColumn(legentUnitTxt5, 2);
+            Windows.UI.Xaml.Controls.Grid.SetRow(legentUnitTxt5, 4);
+            legendLegendGrid.Children.Add(legentUnitTxt5);
+            //6
+            StackPanel legendUnitImg6 = new StackPanel();
+            legendUnitImg6.Background = new SolidColorBrush(Color.FromArgb(255, 0, 138, 0));
+            Windows.UI.Xaml.Controls.Grid.SetColumn(legendUnitImg6, 0);
+            Windows.UI.Xaml.Controls.Grid.SetRow(legendUnitImg6, 5);
+            legendLegendGrid.Children.Add(legendUnitImg6);
+
+            TextBlock legentUnitTxt6 = new TextBlock();
+            legentUnitTxt6.Foreground = new SolidColorBrush(Colors.White);
+            legentUnitTxt6.Text = "velmi dobré";
+            legentUnitTxt6.FontSize = Window.Current.Bounds.Height / 40;
+            Windows.UI.Xaml.Controls.Grid.SetColumn(legentUnitTxt6, 2);
+            Windows.UI.Xaml.Controls.Grid.SetRow(legentUnitTxt6, 5);
+            legendLegendGrid.Children.Add(legentUnitTxt6);
+            //7
+            StackPanel legendUnitImg7 = new StackPanel();
+            legendUnitImg7.Background = new SolidColorBrush(Color.FromArgb(255, 143, 143, 143));
+            Windows.UI.Xaml.Controls.Grid.SetColumn(legendUnitImg7, 0);
+            Windows.UI.Xaml.Controls.Grid.SetRow(legendUnitImg7, 6);
+            legendLegendGrid.Children.Add(legendUnitImg7);
+
+            TextBlock legentUnitTxt7 = new TextBlock();
+            legentUnitTxt7.Foreground = new SolidColorBrush(Colors.White);
+            legentUnitTxt7.Text = "neměří se";
+            legentUnitTxt7.FontSize = Window.Current.Bounds.Height / 40;
+            Windows.UI.Xaml.Controls.Grid.SetColumn(legentUnitTxt7, 2);
+            Windows.UI.Xaml.Controls.Grid.SetRow(legentUnitTxt7, 6);
+            legendLegendGrid.Children.Add(legentUnitTxt7);
+            //8
+            StackPanel legendUnitImg8 = new StackPanel();
+            legendUnitImg8.Background = new SolidColorBrush(Color.FromArgb(255, 138, 137, 156));
+            Windows.UI.Xaml.Controls.Grid.SetColumn(legendUnitImg8, 0);
+            Windows.UI.Xaml.Controls.Grid.SetRow(legendUnitImg8, 7);
+            legendLegendGrid.Children.Add(legendUnitImg8);
+
+            TextBlock legentUnitTxt8 = new TextBlock();
+            legentUnitTxt8.Foreground = new SolidColorBrush(Colors.White);
+            legentUnitTxt8.Text = "nejsou data";
+            legentUnitTxt8.FontSize = Window.Current.Bounds.Height / 40;
+            Windows.UI.Xaml.Controls.Grid.SetColumn(legentUnitTxt8, 2);
+            Windows.UI.Xaml.Controls.Grid.SetRow(legentUnitTxt8, 7);
+            legendLegendGrid.Children.Add(legentUnitTxt8);
+
 
 
             /*

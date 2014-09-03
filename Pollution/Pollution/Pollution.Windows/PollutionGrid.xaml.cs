@@ -172,6 +172,7 @@ namespace Pollution
                     tileCollection.ElementAt(37).statusCOTile(3563);
                     tileCollection.ElementAt(46).statusPM10Tile(75);
                     MainPage.RightPanel.Margin = new Thickness(0, -(Window.Current.Bounds.Height / 6) * 4, 0, 0);
+                    
                     //tileCollection.ElementAt(53).buttonLeftPanelTile();
                 }
             }
