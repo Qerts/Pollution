@@ -44,6 +44,7 @@ namespace Pollution
         static void testTileTapped(object sender, TappedRoutedEventArgs e)
         {
             MainPage.test();
+            //MainPage.animateBigStatus();
         }
 
 

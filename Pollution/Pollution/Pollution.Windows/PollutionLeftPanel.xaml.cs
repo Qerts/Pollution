@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 using Windows.UI.Xaml.Shapes;
 
@@ -34,6 +35,7 @@ namespace Pollution
             //definice pozadi
             LeftPanel.Background = new SolidColorBrush(Color.FromArgb(0, 0, 0, 0));
 
+            
 
             //definice rozmeru
             LeftPanel.Width = (Window.Current.Bounds.Height / 6) * 11;
@@ -700,8 +702,12 @@ namespace Pollution
         public static void showLeftPanel() 
         {
             hideRightPanel();
-            LeftPanel.Margin = new Thickness(0, -(Window.Current.Bounds.Height / 6) * 4, 0, 0);
+            //LeftPanel.Margin = new Thickness(0, -(Window.Current.Bounds.Height / 6) * 4, 0, 0);
             leftPanelCollection.ElementAt(0).buttonLeftPanelButton();
+
+            //animace vyjeti leveho panelu
+            
+
             
         }
     }

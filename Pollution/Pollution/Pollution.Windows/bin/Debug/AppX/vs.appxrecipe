@@ -20,13 +20,13 @@
     <AppXManifest Include="D:\Git\Pollution\Pollution\Pollution\Pollution.Windows\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-09-03T09:02:50.405</Modified>
+      <Modified>2014-09-03T16:04:22.870</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Git\Pollution\Pollution\Pollution\Pollution.Windows\bin\Debug\Pollution.Windows.exe">
       <PackagePath>Pollution.Windows.exe</PackagePath>
-      <Modified>2014-09-03T09:41:07.657</Modified>
+      <Modified>2014-09-03T17:07:50.249</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Git\Pollution\Pollution\Pollution\Pollution.Windows\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
@@ -102,7 +102,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Git\Pollution\Pollution\Pollution\Pollution.Windows\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2014-09-02T10:47:27.375</Modified>
+      <Modified>2014-09-03T16:40:24.707</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Git\Pollution\Pollution\Pollution\Pollution.Windows\bin\Debug\PollutionLeftPanel.xbf">
       <PackagePath>PollutionLeftPanel.xbf</PackagePath>
@@ -114,11 +114,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Git\Pollution\Pollution\Pollution\Pollution.Windows\bin\Debug\Pollution.Windows.xr.xml">
       <PackagePath>Pollution.Windows.xr.xml</PackagePath>
-      <Modified>2014-09-02T10:15:13.826</Modified>
+      <Modified>2014-09-03T16:40:24.321</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Git\Pollution\Pollution\Pollution\Pollution.Windows\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-09-03T09:02:50.199</Modified>
+      <Modified>2014-09-03T16:04:20.498</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -27,13 +27,20 @@ namespace Pollution
         //kolekce pro manipulaci s dlazdicemi
         public static List<Canvas> tileCollection = new List<Canvas>();
 
-
+        public static Windows.UI.Xaml.Controls.Grid LayoutGrid = new Windows.UI.Xaml.Controls.Grid();
+           
         /// <summary>
         /// Inicializace hlavního gridu
         /// </summary>
         private void gridInit()
         {
+            LayoutGrid.Height = 768;
+            LayoutGrid.Width = 1366;
+            MyScrollViewer.Content = LayoutGrid;
 
+            //disablovani rotace pro rotaci displeje
+            //LayoutGrid.ManipulationMode = ManipulationModes.None;
+            
 
 
             //definice pozadi

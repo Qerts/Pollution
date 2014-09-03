@@ -19,12 +19,16 @@
 			VerticalAlignment="Top" 
 			HorizontalScrollMode="Auto" 
 			VerticalScrollMode="Disabled" 
-			ZoomMode="Enabled" 
+			ZoomMode="Disabled" 
         >
-
-            <Grid  x:Name="LayoutGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="768" Width="1366">
+<!--
+            <Grid  x:Name="LayoutGrid" 
+                   Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" 
+                   Height="768" 
+                   Width="1366"
+                   >
                 
-            </Grid>
+            </Grid>-->
 
         </ScrollViewer>
     
