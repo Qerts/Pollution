@@ -31,6 +31,31 @@ namespace Pollution
         public static string StationRegion { set { STATION_REGION = value; } get { return STATION_REGION; } }
         public static string StationCoordinates { set { STATION_COORDS = value; } get { return STATION_COORDS; } }
 
+        private static Tuple<SolidColorBrush,string> getColorAndStatus(StatusColor.Status value) 
+        {
+            switch (value) 
+            {
+                case StatusColor.Status.VeryGood:
+                    return Tuple.Create(new SolidColorBrush(Color.FromArgb(255, 0, 138, 0)), "velmi dobré");
+                case StatusColor.Status.Good:
+                    return Tuple.Create(new SolidColorBrush(Color.FromArgb(255, 132, 161, 47)), "dobré");
+                case StatusColor.Status.Satisfying:
+                    return Tuple.Create(new SolidColorBrush(Color.FromArgb(255, 184, 177, 0)), "uspokojivé");
+                case StatusColor.Status.Suitable:
+                    return Tuple.Create(new SolidColorBrush(Color.FromArgb(255, 207, 141, 19)), "vyhovující");
+                case StatusColor.Status.Bad:
+                    return Tuple.Create(new SolidColorBrush(Color.FromArgb(255, 207, 84, 23)), "špatné");
+                case StatusColor.Status.VeryBad:
+                    return Tuple.Create(new SolidColorBrush(Color.FromArgb(255, 207, 51, 27)), "velmi špatné");
+                case StatusColor.Status.NoData:
+                    return Tuple.Create(new SolidColorBrush(Color.FromArgb(255, 143, 143, 143)), "nejsou data");
+                case StatusColor.Status.NoMeasurement:
+                    return Tuple.Create(new SolidColorBrush(Color.FromArgb(255, 138, 137, 156)), "neměří se");
+                default:
+                    return Tuple.Create(new SolidColorBrush(Color.FromArgb(255, 200, 200, 200)), "chyba");
+            }
+        }
+
         /// <summary>
         /// Tato funkce byla zamyslena takto:
         /// Funkce prevezme hodnoty jednotlivych slozek.
@@ -41,9 +66,205 @@ namespace Pollution
         /// </summary>
         public static void setStatuses() 
         {
-            
+            int value = SO2_VALUE;
+            if (value < 120)
+            {
+                if (value < 50)
+                {
+                    if (value < 25)
+                    {
+                        SO2_STATUS = StatusColor.Status.VeryGood;
+                    }
+                    else
+                    {
+                        SO2_STATUS = StatusColor.Status.Good;
+                    }
+                }
+                else
+                {
+                    SO2_STATUS = StatusColor.Status.Satisfying;
+                }
+            }
+            else
+            {
+                if (value < 350)
+                {
+                    SO2_STATUS = StatusColor.Status.Suitable;
+                }
+                else
+                {
+                    if (value < 500)
+                    {
+                        SO2_STATUS = StatusColor.Status.Bad;
+                    }
+                    else
+                    {
+                        SO2_STATUS = StatusColor.Status.VeryBad;
+                    }
+                }
+            }
+
+            value = O3_VALUE;
+            if (value < 120)
+            {
+                if (value < 65)
+                {
+                    if (value < 33)
+                    {
+                        O3_STATUS = StatusColor.Status.VeryGood;
+                    }
+                    else
+                    {
+                        O3_STATUS = StatusColor.Status.Good;
+                    }
+                }
+                else
+                {
+                        O3_STATUS = StatusColor.Status.Satisfying;
+                }
+            }
+            else
+            {
+                if (value < 180)
+                {
+                        O3_STATUS = StatusColor.Status.Suitable;
+                }
+                else
+                {
+                    if (value < 240)
+                    {
+                        O3_STATUS = StatusColor.Status.Bad;
+                    }
+                    else
+                    {
+                        O3_STATUS = StatusColor.Status.VeryBad;
+                    }
+                }
+            }
+
+            value = NO2_VALUE;
+            if (value < 100)
+            {
+                if (value < 50)
+                {
+                    if (value < 25)
+                    {
+                        NO2_STATUS = StatusColor.Status.VeryGood;
+                    }
+                    else
+                    {
+                        NO2_STATUS = StatusColor.Status.Good;
+                    }
+                }
+                else
+                {
+                        NO2_STATUS = StatusColor.Status.Satisfying;
+                }
+            }
+            else
+            {
+                if (value < 200)
+                {
+                        NO2_STATUS = StatusColor.Status.Suitable;
+                }
+                else
+                {
+                    if (value < 400)
+                    {
+                        NO2_STATUS = StatusColor.Status.Bad;
+                    }
+                    else
+                    {
+                        NO2_STATUS = StatusColor.Status.VeryBad;
+                    }
+                }
+            }
+
+            value = CO_VALUE;
+            if (value < 4000)
+            {
+                if (value < 2000)
+                {
+                    if (value < 1000)
+                    {
+                        CO_STATUS = StatusColor.Status.VeryGood;
+                    }
+                    else
+                    {
+                        CO_STATUS = StatusColor.Status.Good;
+                    }
+                }
+                else
+                {
+                        CO_STATUS = StatusColor.Status.Satisfying;
+                }
+            }
+            else
+            {
+                if (value < 10000)
+                {
+                        CO_STATUS = StatusColor.Status.Suitable;
+                }
+                else
+                {
+                    if (value < 30000)
+                    {
+                        CO_STATUS = StatusColor.Status.Bad;
+                    }
+                    else
+                    {
+                        CO_STATUS = StatusColor.Status.VeryBad;
+                    }
+                }
+            }
+
+            value = PM10_VALUE;
+            if (value < 70)
+            {
+                if (value < 40)
+                {
+                    if (value < 20)
+                    {
+                        PM10_STATUS = StatusColor.Status.VeryGood;
+                    }
+                    else
+                    {
+                        PM10_STATUS = StatusColor.Status.Good;
+                    }
+                }
+                else
+                {
+                        PM10_STATUS = StatusColor.Status.Satisfying;
+                }
+            }
+            else
+            {
+                if (value < 90)
+                {
+                        PM10_STATUS = StatusColor.Status.Suitable;
+                }
+                else
+                {
+                    if (value < 180)
+                    {
+                        PM10_STATUS = StatusColor.Status.Bad;
+                    }
+                    else
+                    {
+                        PM10_STATUS = StatusColor.Status.VeryBad;
+                    }
+                }
+            }
+
         }
 
+        public static Tuple<SolidColorBrush, string> GetSO2ColorAndStatus()
+        {
+            return getColorAndStatus(SO2_STATUS);
+            
+
+        }
+        /*
         public static Tuple<SolidColorBrush,string> GetSO2ColorAndStatus() 
         {
             int value = SO2_VALUE;
@@ -91,6 +312,7 @@ namespace Pollution
             }
             
         }
+         * */
         public static Tuple<SolidColorBrush, string> GetO3ColorAndStatus() 
         {
             int value = O3_VALUE;

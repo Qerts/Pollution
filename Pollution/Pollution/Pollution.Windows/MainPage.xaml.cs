@@ -85,22 +85,22 @@ namespace Pollution
             switch(num%8)
             {
                 case 0:
-                    moodizeGrid(StatusColor.Status.VeryGood, "Lothlórien");
+                    moodizeGrid(StatusColor.Status.VeryGood);
                     break;
                 case 1:
-                    moodizeGrid(StatusColor.Status.Good, "Lothlórien");
+                    moodizeGrid(StatusColor.Status.Good);
                     break;
                 case 2:
-                    moodizeGrid(StatusColor.Status.Satisfying, "Lothlórien");
+                    moodizeGrid(StatusColor.Status.Satisfying);
                     break;
                 case 3:
-                    moodizeGrid(StatusColor.Status.Suitable, "Lothlórien");
+                    moodizeGrid(StatusColor.Status.Suitable);
                     break;
                 case 4:
-                    moodizeGrid(StatusColor.Status.Bad, "Lothlórien");
+                    moodizeGrid(StatusColor.Status.Bad);
                     break;
                 case 5:
-                    moodizeGrid(StatusColor.Status.VeryBad, "Lothlórien");
+                    moodizeGrid(StatusColor.Status.VeryBad);
                     break;
                     /*
                 case 6:
@@ -122,11 +122,13 @@ namespace Pollution
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            Data.setStatuses();
             gridInit();
             gridFullfill();
             leftPanelInit();
             rightPanelInit();
         }
+
 
 
 

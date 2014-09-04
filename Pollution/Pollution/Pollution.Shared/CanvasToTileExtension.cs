@@ -146,6 +146,8 @@ namespace Pollution
             tile.Children.Clear();
             tile.Opacity = 1;
 
+            
+
             string status = "error";
 
             int rating = Data.SO2;
@@ -460,7 +462,7 @@ namespace Pollution
         /// <param name="brush">Barva tilu</param>
         /// <param name="uri">Ciste uri, bez ms-appx</param>
         /// <returns></returns>
-        public static Canvas mainStatusTile(this Canvas tile, string name, SolidColorBrush brush, string uri)
+        public static Canvas mainStatusTile(this Canvas tile, SolidColorBrush brush, string uri)
         {
             tile.Opacity = 1;
             tile.Background = brush;
@@ -484,7 +486,7 @@ namespace Pollution
 
             TextBlock stationName = new TextBlock();
             stationName.Width = (Window.Current.Bounds.Height / 6) * 2;
-            stationName.Text = name;
+            stationName.Text = Data.StationName;
             stationName.FontSize = Window.Current.Bounds.Height/40;
             stationName.Margin = new Thickness(0, (Window.Current.Bounds.Height/48)*14, 0, 0);
             stationName.TextAlignment = TextAlignment.Center;
